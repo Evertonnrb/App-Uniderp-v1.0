@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notas"
+            android:icon="@drawable/estudande"
+            android:title="Notas" />
+        <item
+            android:id="@+id/nav_grade"
+            android:icon="@drawable/grade"
+            android:title="Grade" />
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/calendario"
+            android:title="Calendário" />
+        <item
+            android:id="@+id/nav_calc"
+            android:icon="@drawable/calculadora"
+            android:title="Calcular" />
+    </group>
+
+    <!--
+        <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+    -->
+
+</menu>

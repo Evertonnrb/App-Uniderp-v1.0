@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Uniderp app</string>
+
+
+    <string name="str_aluno">Aluno</string>
+    <string name="title_activity_main">Menu Principal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="str_sair">Sair</string>
+</resources>
