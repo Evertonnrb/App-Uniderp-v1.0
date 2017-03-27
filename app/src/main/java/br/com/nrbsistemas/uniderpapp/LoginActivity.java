@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mToggle = (ToggleButton)findViewById(R.id.toggle_id);
+
         edtLogin = (EditText)findViewById(R.id.edt_login);
         edtSenha = (EditText)findViewById(R.id.edt_senha);
         btnLogar = (Button)findViewById(R.id.btn_logar);
@@ -67,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
         edtLogin.setText("");
         edtSenha.setText("");
     }
+
+
 
 
 }

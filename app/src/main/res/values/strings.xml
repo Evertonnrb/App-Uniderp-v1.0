@@ -9,4 +9,5 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="str_sair">Sair</string>
+    <string name="str_professor">Professor</string>
 </resources>
