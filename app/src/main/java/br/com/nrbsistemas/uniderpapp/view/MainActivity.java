@@ -1,4 +1,4 @@
-package br.com.nrbsistemas.uniderpapp;
+package br.com.nrbsistemas.uniderpapp.view;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import br.com.nrbsistemas.uniderpapp.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

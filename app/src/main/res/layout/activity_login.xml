@@ -3,17 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#363636"
     android:orientation="vertical"
-    tools:context="br.com.nrbsistemas.uniderpapp.LoginActivity">
+    tools:context="br.com.nrbsistemas.uniderpapp.view.LoginActivity">
 
     <ImageView
-        android:id="@+id/img_logo"
+        android:id="@+id/img_logo_login"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="115dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/uniderp2" />
+        android:src="@drawable/uniderplogo"
+        android:clickable="true"
+        android:onClick="moduloAdm"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -35,7 +37,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="30dp"
-            android:hint="ID / Ra"
             android:inputType="text"
             android:maxLines="1" />
     </LinearLayout>
