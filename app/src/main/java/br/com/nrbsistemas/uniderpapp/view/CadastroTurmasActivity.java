@@ -1,4 +1,4 @@
-package br.com.nrbsistemas.uniderpapp;
+package br.com.nrbsistemas.uniderpapp.view;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import br.com.nrbsistemas.uniderpapp.R;
 
 public class CadastroTurmasActivity extends AppCompatActivity {
 

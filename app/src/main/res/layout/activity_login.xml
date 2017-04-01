@@ -33,6 +33,7 @@
 
         <EditText
             android:id="@+id/edt_login"
+            android:gravity="center"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"

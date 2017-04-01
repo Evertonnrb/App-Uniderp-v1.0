@@ -1,9 +1,7 @@
-package br.com.nrbsistemas.uniderpapp;
+package br.com.nrbsistemas.uniderpapp.view;
 
-import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,6 +10,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import br.com.nrbsistemas.uniderpapp.R;
 
 public class AlunosActivity extends AppCompatActivity {
 

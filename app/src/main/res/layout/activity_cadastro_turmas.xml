@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.nrbsistemas.uniderpapp.CadastroTurmasActivity">
+    android:orientation="vertical"
+    android:background="#cacaca"
+    tools:context="br.com.nrbsistemas.uniderpapp.view.CadastroTurmasActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:background="@color/colorSlateGray"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Cadastro de turmas"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curso:"/>
+    <Spinner
+        android:id="@+id/spn_cursos"
+        android:layout_margin="30dp"
+        android:background="@color/colorSlateGray"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        ></Spinner>
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/edt_professor_cad"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Professor"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <EditText
+            android:id="@+id/edt_ra_cad"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="RA"/>
+        <EditText
+            android:id="@+id/edt_nome_cad"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="nome"/>
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/spn_turno"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"></Spinner>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center">
+    <Button
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"/>
+     <Button
+         android:layout_marginLeft="15dp"
+         android:id="@+id/btn_alterar"
+         android:layout_width="120dp"
+         android:layout_height="wrap_content"
+         android:text="Alterar"/>
+
+    </LinearLayout>
+</LinearLayout>

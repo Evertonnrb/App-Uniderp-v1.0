@@ -25,6 +25,10 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.AdmActivity"></activity>
+        <activity android:name=".view.Calc2Activity" />
+        <activity android:name=".view.CadastroTurmasActivity" />
+        <activity android:name=".view.AlunosActivity" />
+        <activity android:name=".NotasActivity"></activity>
     </application>
 
 </manifest>

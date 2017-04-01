@@ -10,4 +10,49 @@
 
     <string name="str_sair">Sair</string>
     <string name="str_professor">Professor</string>
+
+    <string-array name="cursos">
+        <item>Selecione</item>
+        <item>Eng da computação</item>
+        <item>Ciências da computação</item>
+        <item>Analise e des. de sistemas</item>
+        <item>Redes de computadores</item>
+    </string-array>
+
+    <string-array name="turnos">
+        <item>selecione</item>
+        <item>Manhã</item>
+        <item>Tarde</item>
+        <item>Noite</item>
+    </string-array>
+
+    <string-array name="ex_aluno">
+        <item>Brunna</item>
+        <item>Anna</item>
+        <item>Suzi</item>
+        <item>Alana</item>
+        <item>Rafaela</item>
+        <item>Monique</item>
+        <item>Aline</item>
+        <item>Thaís</item>
+        <item>Rafaela</item>
+        <item>Barbara</item>
+        <item>Dani</item>
+        <item>Nana</item>
+        <item>Monique</item>
+        <item>Sabrina</item>
+        <item>Michele</item>
+        <item>Dandara</item>
+        <item>Carol</item>
+        <item>Carolima</item>
+        <item>Carolima</item>
+        <item>Mari</item>
+        <item>Ana</item>
+        <item>Laura</item>
+        <item>Luciana</item>
+        <item>Dorinha</item>
+        <item>Fernanda</item>
+        <item>Isadora</item>
+        <item>Elizngela</item>
+    </string-array>
 </resources>
