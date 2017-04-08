@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import br.com.nrbsistemas.uniderpapp.R;
 
+/**
+ * Classe para eftuar calculos das notas dos alunos
+ */
 public class Calc2Activity extends AppCompatActivity {
 
     @Override

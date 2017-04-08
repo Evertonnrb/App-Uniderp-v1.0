@@ -19,6 +19,12 @@ import android.widget.Toast;
 
 import br.com.nrbsistemas.uniderpapp.R;
 
+/**
+ * Classe principal que instanciada ao fazer o login
+ * Essa classe instancia o menu drawer
+ * Nessa classe serao feita 80% das atividades do alunos e professores
+ * Usar a orientação a objetos para validação quando necessario ao efetuar login
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,7 +34,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        /**
+         *
+         * fab == implementar troca de msgm email entre alunos ou professores
+         * botão flutuante icone da caixa de mgn
+         */
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +48,9 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        /**
+         * Instancia o menu drawer
+         */
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -48,6 +61,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    /**
+     * Instancia o menu (sobrescreve o botao voltar)
+     * gravity = em cima e a esquerda
+     */
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -58,21 +75,29 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /**
+     *
+     * @param menu
+     * @return instacia o menu voltar que está no diretorio menu
+     * com suas opções até agora apenas com opção sair
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
+    /**
+     *
+     * @param item
+     * @return retoran os id dos objetos, possibilitando a manipulação
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //Ao selecionar a opção mostra uma caixa de dialogo para
+        //confirmar a saida da aplicação
         if (id == R.id.menu_sair) {
             AlertDialog.Builder msg = new AlertDialog.Builder(this);
             msg.setTitle("Atenção")
@@ -96,6 +121,11 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     *
+     * @param item
+     * @return utizando o item das opçoes selecionadas do menu drawer
+     */
     //@SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -109,7 +139,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_calendario) {
             Toast.makeText(getApplicationContext(),": "+item.getClass().getName(),Toast.LENGTH_SHORT).show();
-
+            startActivity(new Intent(this, CalendarioActivity.class));
         } else if (id == R.id.nav_calc) {
             Toast.makeText(getApplicationContext(),": "+item.getClass().getName(),Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, Calc2Activity.class));
@@ -118,7 +148,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }*/
-
+        /**
+         * Carraga uma instancia do drawer layout
+         */
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

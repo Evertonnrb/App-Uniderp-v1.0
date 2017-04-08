@@ -15,32 +15,56 @@ import br.com.nrbsistemas.uniderpapp.model.Admin;
 
 /**
  * Created by Everton on 27/03/2017.
+ * Adpter que carrega a lisa de opções do ADM
  */
 
 public class AdmAdapter extends BaseAdapter {
     private final List<Admin> listaAdm;
     private final Context context;
 
+    //Lista do tipo ADM com contexto
     public AdmAdapter(List<Admin> listaAdm, Context context) {
         this.listaAdm = listaAdm;
         this.context = context;
     }
 
+    /**
+     * getCount conta a quantidade de linhas da list view
+     * @return retorna o tamanho da lista
+     */
     @Override
     public int getCount() {
         return listaAdm.size();
     }
 
+    /**
+     *
+     * @param position
+     * @return retorna a posição dos elementos da list view
+     */
     @Override
     public Object getItem(int position) {
         return listaAdm.get(position);
     }
 
+    /**
+     *
+     * @param position
+     * @return o id do objeto em sua respectiva posição
+     */
     @Override
     public long getItemId(int position) {
         return position;
     }
 
+    /**
+     *
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return renderiza a list view com a posição,id,contexto
+     * inflando a list view opcões_adm
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

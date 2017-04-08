@@ -17,6 +17,13 @@ import android.widget.ToggleButton;
 
 import br.com.nrbsistemas.uniderpapp.R;
 
+/**
+ * Classe da tela de login
+ * Essa classe e responsavél pela validaçao de usuario
+ * e do tipo que ele é
+ * Alem da opção no ImageView de acessar o modulo Admin
+ * Aqui que mora a gambiarra
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private ToggleButton mToggle;
@@ -30,6 +37,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        /**
+         * Ao ser clicado ira apresentar uma layout de autenticação
+         * para valida do modulo ADM
+         */
         logoLogin = (ImageView) findViewById(R.id.img_logo_login);
         logoLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +52,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * mToggle ficara responsavel pela validação do tipo do ususario
+         */
         mToggle = (ToggleButton) findViewById(R.id.toggle_id);
         mToggle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +80,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Valida o login do usuario
+     */
     public void _logar() {
         String login = edtLogin.getText().toString();
         String senha = edtSenha.getText().toString();
@@ -94,20 +111,33 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * limpa os campos
+     */
+    //TODO mudar implemantação para o cliclo de vida
     public void _limpar() {
         edtLogin.setText("");
         edtSenha.setText("");
     }
 
+    /**
+     * Instancia o layout responsavel pela autnticação
+     */
     private void _autenticacao() {
         LayoutInflater li = getLayoutInflater();
         final View view = li.inflate(R.layout.autentica_adm, null);
     }
 
+    /**
+     * Contator de clicks libera o dialogo ao ser ==10
+     */
     private void _logimAdm() {
         atualiza += 1;
     }
 
+    /**
+     * Infla e autentica o modulo ADM
+     */
     public void _moduloAdm() {
         LayoutInflater li = getLayoutInflater();
         View view = li.inflate(R.layout.authentica_login, null);

@@ -34,11 +34,18 @@ public class Admin {
         this.opcao = opcao;
     }
 
+    /**
+     *  opcoesAdm carrega na lista asopções
+     *  com icones estáticos
+     *
+     * @return
+     */
     public static List<Admin> opcoesAdm(){
         List<Admin> opc = new ArrayList<>();
         opc.add(new Admin(R.drawable.grade,"\tCriar turma"));
+        opc.add(new Admin(R.drawable.ic_person_add_black_24dp,"\tCadastrar professor"));
         opc.add(new Admin(R.drawable.estudande,"\tAdicionar alunos"));
-        opc.add(new Admin(R.drawable.settings,"\tConfigurações"));
+       // opc.add(new Admin(R.drawable.settings,"\tConfigurações"));
         opc.add(new Admin(R.drawable.del,"\tDeletar ou excluir "));
 
         return opc;

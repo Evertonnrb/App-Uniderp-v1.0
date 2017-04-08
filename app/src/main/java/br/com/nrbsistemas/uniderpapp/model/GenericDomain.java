@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by Everton on 26/03/2017.
+ * Classe que vai distribuir os id das entidades
  */
 
 public class GenericDomain implements Serializable{

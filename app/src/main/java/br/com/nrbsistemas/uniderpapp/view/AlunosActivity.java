@@ -13,10 +13,13 @@ import java.util.Arrays;
 
 import br.com.nrbsistemas.uniderpapp.R;
 
+/**
+ * Classe responsavel pela visao de alunos
+ */
+
 public class AlunosActivity extends AppCompatActivity {
 
     private ListView listaAlunos;
-    //TODO implementar a busca do banco
     ArrayAdapter<String> alunos;
 
     @Override

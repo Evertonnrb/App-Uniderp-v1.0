@@ -14,6 +14,11 @@ import android.widget.Toast;
 
 import br.com.nrbsistemas.uniderpapp.R;
 
+/**
+ * Classe responvavél pelo cadastro
+ * de professores as respectivas disciplinas
+ */
+
 public class CadastroTurmasActivity extends AppCompatActivity {
 
     private Spinner spnCursos, spnTurno;
@@ -31,34 +36,58 @@ public class CadastroTurmasActivity extends AppCompatActivity {
         edtNome = (EditText)findViewById(R.id.edt_nome_cad);
         btnCadastrar = (Button)findViewById(R.id.btn_cadastrar);
 
-        //Carregando os cursos
+        /**
+         * Carregando adpter dos cursos
+         */
         ArrayAdapter<CharSequence> cursos = ArrayAdapter.createFromResource(
                 this, R.array.cursos, android.R.layout.simple_spinner_dropdown_item
         );
         spnCursos.setAdapter(cursos);
 
-        //Carregando Turnos
+        /**
+         * Carregando adapter do período dos cursos
+         */
         ArrayAdapter<CharSequence> periodo = ArrayAdapter.createFromResource(
                 this, R.array.turnos, android.R.layout.simple_spinner_dropdown_item
         );
         spnTurno.setAdapter(periodo);
 
-        //Botao voltar
+        /**
+         * Adicionando o botão voltar
+         */
+        //TODO verificar porque não está funcionado
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
-    //inflando menu
+    /**
+     * Inflando o menu
+     * @param menu
+     * @return carraga o menu_cad do diretorio menu
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_cad,menu);
         return true;
     }
-    //ouvindo a seleção de menu
+
+    /**
+     *
+     * @param item
+     * @return ouvindo o listener do menu selecionado
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        /**
+         *
+         */
         if (id == R.id.menu_cad_sair){
+            /**
+             * Abrindo um dialogo para
+             * sair da aplicação
+             * encerrando a aplicação
+             */
             AlertDialog.Builder msg = new AlertDialog.Builder(this);
             msg.setTitle("Atenção")
                     .setMessage("Deseja fechar a aplicação?")
