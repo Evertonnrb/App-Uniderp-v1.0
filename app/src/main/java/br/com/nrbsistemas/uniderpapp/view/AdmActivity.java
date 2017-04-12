@@ -94,7 +94,8 @@ public class AdmActivity extends AppCompatActivity implements AdapterView.OnItem
                 //TODO DAO cadastro turmas
                 break;
             case 1:
-                Toast.makeText(getApplicationContext(), "Implementar o cadastro de professor", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Implementar o cadastro de professor", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, CadProActivity.class));
                 //TODO DAO cadastro de porfessor
                 break;
             case 2:

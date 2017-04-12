@@ -34,6 +34,26 @@
         <item>Redes de computadores</item>
     </string-array>
 
+    <string-array name="lista_estados">
+        <item>Selecione um estado</item>
+        <item>Mato Grosso do Sul</item>
+        <item>Mato Grosso</item>
+        <item>São Paulo</item>
+        <item>Paraná</item>
+        <item>Rio de Janeiro</item>
+        <item>Distrito federal</item>
+    </string-array>
+
+    <string-array name="lista_cidades">
+        <item>Selecione uma cidade</item>
+        <item>Campo Gande</item>
+        <item>Cuiaba</item>
+        <item>São Paulo</item>
+        <item>Paraná</item>
+        <item>Rio de Janeiro</item>
+        <item>Brasília</item>
+    </string-array>
+
     <string-array name="ex_aluno">
         <item>Brunna</item>
         <item>Anna</item>

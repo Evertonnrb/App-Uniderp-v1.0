@@ -39,7 +39,7 @@
         </activity>
         <activity android:name=".view.GradeActivity" />
         <activity
-            android:name=".CadProActivity"
+            android:name=".view.CadProActivity"
             android:label="@string/title_activity_cad_pro"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
