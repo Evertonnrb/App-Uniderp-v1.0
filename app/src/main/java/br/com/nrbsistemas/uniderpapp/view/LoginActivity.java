@@ -3,6 +3,7 @@ package br.com.nrbsistemas.uniderpapp.view;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogar;
     private ImageView logoLogin;
     private int atualiza = 0;
+    private static final int TEMPORIZADOR = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         logoLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                _logimAdm();
-                if (atualiza == 10) {
-                    _moduloAdm();
-                }
+               _temporizador();
             }
         });
 
@@ -61,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mToggle.isChecked()) {
                     edtLogin.setHint("Sou aluno RA");
-                } else  {
+                } else {
                     edtLogin.setHint("Sou professor ID");
                 }
             }
@@ -81,9 +79,25 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
+     * Gambiarra da nasa
+     */
+    public void _temporizador(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                _logimAdm();
+                if (atualiza == 10) {
+                    _moduloAdm();
+                }
+            }
+        },TEMPORIZADOR);
+    }
+
+    /**
      * Valida o login do usuario
      */
     public void _logar() {
+
         String login = edtLogin.getText().toString();
         String senha = edtSenha.getText().toString();
         if (login.isEmpty() && senha.isEmpty()) {

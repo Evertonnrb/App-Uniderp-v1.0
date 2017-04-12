@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity
          * fab == implementar troca de msgm email entre alunos ou professores
          * botão flutuante icone da caixa de mgn
          */
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.btn_flutuante);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity
                     })
                     .create()
                     .show();
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, CalendarioActivity.class));
         } else if (id == R.id.nav_calc) {
             Toast.makeText(getApplicationContext(),": "+item.getClass().getName(),Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, Calc2Activity.class));
+            startActivity(new Intent(this, CalcularNotasActivity.class));
         } /*else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

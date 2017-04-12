@@ -5,38 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#cacaca"
-    tools:context="br.com.nrbsistemas.uniderpapp.view.CadastroTurmasActivity">
+    android:layout_margin="20dp"
+    tools:context="br.com.nrbsistemas.uniderpapp.view.ProfessoresCadastroActivity">
 
     <TextView
-        android:background="@color/colorSlateGray"
+
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Cadastro de turmas"/>
+        android:text="Cadastro de professores / cursos"/>
 
-    <EditText
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Curso:"/>
+        android:text="Selecione o curso"/>
+
     <Spinner
         android:id="@+id/spn_cursos"
         android:layout_margin="30dp"
-        android:background="@color/colorSlateGray"
+        android:background="@color/colorPrimary"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         ></Spinner>
     <EditText
         android:layout_margin="10dp"
         android:id="@+id/edt_professor_cad"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:hint="Professor"/>
+        android:hint="Professor(a)"/>
 
-    <LinearLayout
+    <!--
+        <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -53,10 +58,19 @@
             android:layout_marginLeft="10dp"
             android:hint="nome"/>
     </LinearLayout>
+    -->
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Selecione o período"/>
     <Spinner
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/spn_turno"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"></Spinner>
 

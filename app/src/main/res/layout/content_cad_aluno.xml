@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.nrbsistemas.uniderpapp.view.AlunoCadastroActivity"
+    tools:showIn="@layout/activity_aluno_cad_sup">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorCinza"
+        android:gravity="center"
+        android:text="Cadastrar alunos / cursos" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:id="@+id/edt_cadastro_aluno_nome"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Nome do aluno"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/edt_cadastro_aluno_ra"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Ra" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+
+        <Button
+            android:id="@+id/btn_curso_cad_aluno"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Selecionar curso" />
+        <!--
+        <Spinner
+            android:id="@+id/spn_cadastro_curso_aluno"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#cacaca"></Spinner>
+-->
+        <EditText
+            android:id="@+id/edt_cadastro_aluno_turma"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Turma" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btn_cadastrar_aluno_salvar"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+
+        <Button
+            android:id="@+id/btn_cadastrar_aluno_alterar"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Alterar" />
+    </LinearLayout>
+</LinearLayout>

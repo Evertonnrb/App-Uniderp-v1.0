@@ -7,17 +7,11 @@ import android.text.format.DateFormat;
  */
 
 public class Professor extends Pessoa{
-    private Long id;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private Long codigo;
+    private Estado estado;
+    private Cidade cidade;
+    private Double salario;
+    private Disciplina disciplina;
 
     @Override
     DateFormat dataEntrada() {
@@ -32,5 +26,45 @@ public class Professor extends Pessoa{
     @Override
     Boolean ativo() {
         return null;
+    }
+
+    public Long getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
+
+    public Double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(Double salario) {
+        this.salario = salario;
+    }
+
+    public Disciplina getDisciplina() {
+        return disciplina;
+    }
+
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
     }
 }

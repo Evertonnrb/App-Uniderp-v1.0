@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,28 +14,60 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import br.com.nrbsistemas.uniderpapp.R;
+import br.com.nrbsistemas.uniderpapp.model.Disciplina;
+import br.com.nrbsistemas.uniderpapp.model.Periodo;
+import br.com.nrbsistemas.uniderpapp.model.Professor;
 
 /**
  * Classe responvavél pelo cadastro
  * de professores as respectivas disciplinas
  */
 
-public class CadastroTurmasActivity extends AppCompatActivity {
+public class ProfessoresCadastroActivity extends AppCompatActivity {
 
     private Spinner spnCursos, spnTurno;
     private EditText edtRa,edtNome,edtProfessor;
     private Button btnCadastrar, btnAlterar;
 
+    //Periodo enum
+    Periodo m = Periodo.MATUTINO;
+    Periodo v = Periodo.VESPERTINO;
+    Periodo n = Periodo.NOTURNO;
+
+    Professor professor = new Professor();
+    Disciplina disciplina = new Disciplina();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_turmas);
+        setContentView(R.layout.activity_cad_prof);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
         spnCursos = (Spinner) findViewById(R.id.spn_cursos);
         spnTurno = (Spinner)findViewById(R.id.spn_turno);
-        edtProfessor = (EditText)findViewById(R.id.edt_ra_cad);
-        edtRa = (EditText)findViewById(R.id.edt_ra_cad);
-        edtNome = (EditText)findViewById(R.id.edt_nome_cad);
+        //edtProfessor = (EditText)findViewById(R.id.edt_ra_cad);
+        //edtRa = (EditText)findViewById(R.id.edt_ra_cad);
+        //edtNome = (EditText)findViewById(R.id.edt_nome_cad);
+        edtProfessor = (EditText)findViewById(R.id.edt_professor_cad);
         btnCadastrar = (Button)findViewById(R.id.btn_cadastrar);
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                professor.setNome(edtProfessor.getText().toString());
+                disciplina.setNome(spnCursos.getSelectedItem().toString());
+
+                if(spnTurno.equals(Periodo.MATUTINO)){
+                    disciplina.setPeriodo(Periodo.MATUTINO);
+                }else if(spnTurno.equals(Periodo.VESPERTINO)){
+                    disciplina.setPeriodo(Periodo.VESPERTINO);
+                }else{
+                    disciplina.setPeriodo(Periodo.NOTURNO);
+                }
+            }
+        });
 
         /**
          * Carregando adpter dos cursos
@@ -52,12 +85,6 @@ public class CadastroTurmasActivity extends AppCompatActivity {
         );
         spnTurno.setAdapter(periodo);
 
-        /**
-         * Adicionando o botão voltar
-         */
-        //TODO verificar porque não está funcionado
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     /**
@@ -79,15 +106,11 @@ public class CadastroTurmasActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        /**
-         *
-         */
+        if(id == android.R.id.home){
+            finish();
+        }
         if (id == R.id.menu_cad_sair){
-            /**
-             * Abrindo um dialogo para
-             * sair da aplicação
-             * encerrando a aplicação
-             */
+            //Dialogo confirmacao saida
             AlertDialog.Builder msg = new AlertDialog.Builder(this);
             msg.setTitle("Atenção")
                     .setMessage("Deseja fechar a aplicação?")

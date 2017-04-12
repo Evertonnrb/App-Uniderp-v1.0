@@ -26,6 +26,14 @@
         <item>Noite</item>
     </string-array>
 
+    <string-array name="lista_de_cursos">
+        <item>Selecione um curso</item>
+        <item>Eng Computação</item>
+        <item>Ciências da computação</item>
+        <item>Tec. análise e desenvolvimento de sistemas</item>
+        <item>Redes de computadores</item>
+    </string-array>
+
     <string-array name="ex_aluno">
         <item>Brunna</item>
         <item>Anna</item>
@@ -55,4 +63,6 @@
         <item>Isadora</item>
         <item>Elizngela</item>
     </string-array>
+    <string name="title_activity_aluno_cadastro">AlunoCadastroActivity</string>
+    <string name="title_activity_cad_pro">CadProActivity</string>
 </resources>

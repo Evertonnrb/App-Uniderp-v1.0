@@ -69,7 +69,7 @@ public class AdmAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         //inflando a view
-        View view = LayoutInflater.from(context).inflate(R.layout.opcaoes_adm,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.opcoes_adm,parent,false);
         //configurando a view
         TextView txt_opc = (TextView) view.findViewById(R.id.txt_opcoes_adm);
         ImageView img_opc = (ImageView) view.findViewById(R.id.img_opc_adm);

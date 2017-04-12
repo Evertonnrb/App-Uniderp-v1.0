@@ -5,14 +5,11 @@ import android.os.Bundle;
 
 import br.com.nrbsistemas.uniderpapp.R;
 
-/**
- * Classe para eftuar calculos das notas dos alunos
- */
-public class Calc2Activity extends AppCompatActivity {
+public class GradeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calc2);
+        setContentView(R.layout.activity_grade);
     }
 }

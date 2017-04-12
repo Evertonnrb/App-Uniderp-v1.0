@@ -14,7 +14,7 @@ import java.util.Arrays;
 import br.com.nrbsistemas.uniderpapp.R;
 
 /**
- * Classe responsavel pela visao de alunos
+ * Classe responsavel pela listagem de alunos
  */
 
 public class AlunosActivity extends AppCompatActivity {

@@ -2,11 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#000</color><!--#FF4081 rosa -->
     <color name="colorCinza">#808080</color>
     <color name="colorDarkBlue">#00008B</color>
     <color name="colorSkyBlue">#00BFFF</color>
     <color name="colorSlateGray">#708090</color>
     <color name="colorVermelho">#FF0000</color>
-
+    <color name="colorCinzaMuitoEscuro">#263238</color>
+    <color name="colorAzulClarinho">#eceff1</color>
 </resources>

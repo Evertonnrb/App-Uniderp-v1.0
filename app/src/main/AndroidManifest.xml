@@ -13,23 +13,35 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.LoginActivity">
+        <activity android:name=".view.LoginActivity" />
+        <activity
+            android:name=".view.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.AdmActivity" />
+        <activity android:name=".view.CalcularNotasActivity" />
+        <activity android:name=".view.ProfessoresCadastroActivity" />
+        <activity android:name=".view.AlunosActivity" />
+        <activity android:name=".view.NotasActivity" />
+        <activity android:name=".view.CalendarioActivity" />
+        <activity
+            android:name=".view.AlunoCadastroActivity"
+            android:label="@string/title_activity_aluno_cadastro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.GradeActivity" />
         <activity
-            android:name=".view.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.AdmActivity" />
-        <activity android:name=".view.Calc2Activity" />
-        <activity android:name=".view.CadastroTurmasActivity" />
-        <activity android:name=".view.AlunosActivity" />
-        <activity android:name=".view.NotasActivity" />
-        <activity android:name=".view.CalendarioActivity"></activity>
+            android:name=".CadProActivity"
+            android:label="@string/title_activity_cad_pro"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

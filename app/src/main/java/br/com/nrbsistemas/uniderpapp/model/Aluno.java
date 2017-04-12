@@ -10,6 +10,25 @@ public class Aluno extends Pessoa{
     private Long ra;
     private Curso curso;
     private Disciplina disciplina;
+    private Double n1;
+    private Double n2;
+    private Double media;
+    private Boolean situacao;
+
+    @Override
+    DateFormat dataEntrada() {
+        return null;
+    }
+
+    @Override
+    DateFormat dataSaida() {
+        return null;
+    }
+
+    @Override
+    Boolean ativo() {
+        return null;
+    }
 
     public Long getRa() {
         return ra;
@@ -35,18 +54,53 @@ public class Aluno extends Pessoa{
         this.disciplina = disciplina;
     }
 
-    @Override
-    DateFormat dataEntrada() {
-        return null;
+    public Double getN1() {
+        return n1;
     }
 
-    @Override
-    DateFormat dataSaida() {
-        return null;
+    public void setN1(Double n1) {
+        this.n1 = n1;
     }
 
-    @Override
-    Boolean ativo() {
-        return null;
+    public Double getN2() {
+        return n2;
+    }
+
+    public void setN2(Double n2) {
+        this.n2 = n2;
+    }
+
+    public Double getMedia() {
+        return media;
+    }
+
+    public void setMedia(Double media) {
+        this.media = media;
+    }
+
+    public Boolean getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(Boolean situacao) {
+        this.situacao = situacao;
+    }
+
+    public Double calculaMedia(Double b1,Double b2){
+        setMedia(((getN1()*3)+(getN2()*4)));
+        return this.getMedia();
+    }
+    public String imprimeSituacao(){
+
+        String sit;
+
+        if(getMedia()>=7){
+            sit = "Aprovado";
+        }else if(getMedia()<7 && getMedia()>3){
+            sit = "Exame";
+        }else{
+            sit = "Reprovado";
+        }
+        return sit;
     }
 }

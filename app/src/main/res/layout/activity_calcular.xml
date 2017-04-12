@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    tools:context="br.com.nrbsistemas.uniderpapp.view.CalcularNotasActivity">
+
+    <TextView
+        android:id="@+id/txt_calc_nome_aluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nome do aluno"/>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você está : "/>
+        <TextView
+            android:id="@+id/txt_cal_situacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="situção do aluno"
+            android:layout_marginLeft="120dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sua média para o exame :"/>
+        <TextView
+            android:id="@+id/txt_media_aluno_calc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:text="media do aluno"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular possíbilidades"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center">
+        <EditText
+            android:id="@+id/edt_cal_nota_exame"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Nota exame"
+            android:maxLines="1"
+            android:maxLength="2"
+            android:inputType="numberDecimal"/>
+        <Button
+            android:id="@+id/btn_cal_calcular_exame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Calcular"/>
+    </LinearLayout>
+</LinearLayout>

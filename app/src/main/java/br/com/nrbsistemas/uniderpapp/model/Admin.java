@@ -42,11 +42,11 @@ public class Admin {
      */
     public static List<Admin> opcoesAdm(){
         List<Admin> opc = new ArrayList<>();
-        opc.add(new Admin(R.drawable.grade,"\tCriar turma"));
-        opc.add(new Admin(R.drawable.ic_person_add_black_24dp,"\tCadastrar professor"));
-        opc.add(new Admin(R.drawable.estudande,"\tAdicionar alunos"));
+        opc.add(new Admin(R.drawable.grade,"\tCadastros e alterações"));
+        opc.add(new Admin(R.drawable.ic_person_add_black_24dp,"\tCadastrar professores"));
+        opc.add(new Admin(R.drawable.estudande,"\tPesquisar alunos"));
        // opc.add(new Admin(R.drawable.settings,"\tConfigurações"));
-        opc.add(new Admin(R.drawable.del,"\tDeletar ou excluir "));
+        opc.add(new Admin(R.drawable.del,"\tExclusões e trancamentos "));
 
         return opc;
     }

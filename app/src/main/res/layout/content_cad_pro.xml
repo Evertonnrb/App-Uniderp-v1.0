@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="13dp"
+    android:background="@color/colorAzulClarinho"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.nrbsistemas.uniderpapp.CadProActivity"
+    tools:showIn="@layout/activity_cad_pro">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dados profissionais" />
+
+    <EditText
+        android:id="@+id/edt_nome_professor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nome:"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/edt_nome_dicplina_professor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Disciplina"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Dados pessoais" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_lagradouro_prof"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Lagradouro"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/edt_num_rua_professor"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Nº"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/edt_cpf_pro"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="CPF 000.0000.00" />
+
+        <EditText
+            android:id="@+id/edt_telefone_pro"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="(67)9999-0000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <Button
+            android:id="@+id/btn_salvar_estado"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAzulClarinho"
+            android:drawableRight="@drawable/ic_arrow_downward_black_24dp"
+            android:text="Estado " />
+
+        <Button
+            android:id="@+id/btn_salvar_cidade"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAzulClarinho"
+            android:drawableRight="@drawable/ic_arrow_downward_black_24dp"
+            android:text="Cidade" />
+        />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_salvar_cad_pro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Salvar" />
+</LinearLayout>

@@ -8,6 +8,7 @@ public class Disciplina extends GenericDomain {
     private String nome;
     private String descrisao;
     private Professor professor;
+    private Periodo periodo;
 
     public String getNome() {
         return nome;
@@ -31,5 +32,13 @@ public class Disciplina extends GenericDomain {
 
     public void setProfessor(Professor professor) {
         this.professor = professor;
+    }
+
+    public Periodo getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(Periodo periodo) {
+        this.periodo = periodo;
     }
 }
